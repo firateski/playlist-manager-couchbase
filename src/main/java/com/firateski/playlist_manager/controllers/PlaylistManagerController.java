@@ -2,7 +2,8 @@ package com.firateski.playlist_manager.controllers;
 
 import com.firateski.playlist_manager.models.Playlist;
 import com.firateski.playlist_manager.models.Track;
-import com.firateski.playlist_manager.services.PlaylistService;
+import com.firateski.playlist_manager.services.PlaylistManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +14,10 @@ import java.util.List;
 @RequestMapping("/playlists")
 public class PlaylistManagerController {
 
-    private final PlaylistService playlistService;
+    private final PlaylistManager playlistService;
 
-    public PlaylistManagerController(PlaylistService playlistService) {
+    @Autowired
+    public PlaylistManagerController(PlaylistManager playlistService) {
         this.playlistService = playlistService;
     }
 
