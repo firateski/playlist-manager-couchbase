@@ -6,6 +6,7 @@ import com.firateski.playlist_manager.models.Track;
 import java.util.List;
 
 public interface PlaylistManager {
+
     void create(Playlist playlist);
 
     Playlist findById(String id);

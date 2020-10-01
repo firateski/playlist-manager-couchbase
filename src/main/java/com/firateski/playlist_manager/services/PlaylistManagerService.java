@@ -3,16 +3,18 @@ package com.firateski.playlist_manager.services;
 import com.firateski.playlist_manager.models.Playlist;
 import com.firateski.playlist_manager.models.Track;
 import com.firateski.playlist_manager.repositories.PlaylistRepository;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class PlaylistService {
+@Primary
+public class PlaylistManagerService implements PlaylistManager {
 
     private final PlaylistRepository playlistRepository;
 
-    public PlaylistService(PlaylistRepository playlistRepository) {
+    public PlaylistManagerService(PlaylistRepository playlistRepository) {
         this.playlistRepository = playlistRepository;
     }
 
