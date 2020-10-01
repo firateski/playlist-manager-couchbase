@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+concert.iml
+target
+.mvn
+**/src/main/**/target/
+**/src/test/**/target/
+*.iws
+*.iml
+*.ipr
